@@ -46,7 +46,7 @@ const Statistics = () => {
             data={chartData}
             options={options}
             width={"100%"}
-            height={"1000px"}
+            height={"900px"}
         />
     )
 
