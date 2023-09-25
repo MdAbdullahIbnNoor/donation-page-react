@@ -1,19 +1,26 @@
 import { useLoaderData, useParams } from "react-router-dom"
 import { useState } from "react";
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { saveDonation } from "../../utility/localstorage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CardDetails = () => {
 
-    // const [isButtonClicked, setButtonClicked] = useState(false);
+    const [isButtonClicked, setButtonClicked] = useState(false);
 
     const cards = useLoaderData();
     const { id } = useParams();
     const idInt = parseInt(id);
-    const card = cards.find(job => job.id === idInt)
+    const card = cards.find(card => card.id === idInt)
 
     console.log(card);
-    const { title, picture, category, description, extended_description, price, category_bg } = card;
+    const { title, picture, description, extended_description, price, category_bg } = card;
+
+    const notify = () => {
+        saveDonation(idInt);
+        toast.success("Donation Completed Successfully!!");
+        setButtonClicked(true);
+    }
 
     const categoryStyle = {
         backgroundColor: category_bg,
@@ -29,8 +36,8 @@ const CardDetails = () => {
                     src={picture}
                 />
                 <div className="hero-overlay h-24 w-full relative -top-24 bg-opacity-70">
-                    <button className="ml-7 w-36 inline-flex text-gray-200 font-semibold  border-0 py-2 px-6 focus:outline-none hover:bg-red-700 rounded text-lg mt-7" style={categoryStyle}> 
-                        Donate ${price}
+                    <button onClick={() => notify()} className="ml-7 w-36 inline-flex text-gray-200 font-semibold  border-0 py-2 px-6 focus:outline-none hover:bg-red-700 rounded text-lg mt-7" style={categoryStyle}>
+                        {isButtonClicked ? `Donated` : `Donate ${price}$`}
                     </button>
                 </div>
 
@@ -46,6 +53,7 @@ const CardDetails = () => {
                     </p>
                 </div>
             </div>
+            <ToastContainer />
         </section>
     );
 };

@@ -18,14 +18,14 @@ const Card = ({ card }) => {
 
     return (
         <Link to={`/card/${id}`}>
-            <div className="card bg-base-100 shadow-xl h-72">
-                <figure><img className="w-full h-24 object-cover" src={picture} alt="Shoes" /></figure>
+            <div className="card shadow-xl h-72">
+                <figure className="h-2/3"><img className="w-full  object-cover" src={picture} alt="Shoes" /></figure>
                 <div className="card-body rounded-b-xl" style={cardStyle}>
                     <div className="card-actions justify-start">
                         <div className="h-8 text-xm rounded-lg py-1 px-2 font-bold" style={categoryStyle}>{category}</div>
                     </div>
                     <div className="p-0">
-                        <h2 className="card-title text-lg mb-2 " style={titleStyle}>
+                        <h2 className="card-title text-lg mb-1" style={titleStyle}>
                             {title}
                         </h2>
                     </div>
