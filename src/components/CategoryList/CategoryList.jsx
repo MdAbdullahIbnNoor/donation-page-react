@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
 
-const CategoryList = () => {
+const CategoryList = ({search}) => {
+
+    // console.log(isSearching);
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
@@ -9,6 +11,8 @@ const CategoryList = () => {
             .then(res => res.json())
             .then(data => setCards(data));
     }, [])
+    
+    
 
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:py-20">
@@ -22,7 +26,9 @@ const CategoryList = () => {
             </div>
             <div className="grid gap-7 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
                 {
-                    cards.map((card, idx) => <Card key={idx} card={card}></Card>)
+                    cards.filter((card => {
+                        return search === "" ? card : card.category.includes(search)
+                    })).map((card, idx) => <Card key={idx} card={card}></Card>)
                 }
             </div>
         </div>
