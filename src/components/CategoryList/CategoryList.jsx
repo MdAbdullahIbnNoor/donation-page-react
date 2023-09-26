@@ -24,7 +24,7 @@ const CategoryList = ({isSearching, setIsSearching}) => {
                     Explore donation opportunities with all the information you need. Its your givings
                 </p>
             </div>
-            <div className="grid gap-7 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-7 row-gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {
                     cards.filter((card => {
                         return isSearching === null ? card : card.category.includes(isSearching)

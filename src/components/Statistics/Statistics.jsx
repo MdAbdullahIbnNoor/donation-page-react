@@ -35,10 +35,8 @@ const Statistics = () => {
     ];
 
     const options = {
-        title: "Percentage Chart",
+        title: "Donation Chart",
     };
-
-
 
     return (
         <Chart

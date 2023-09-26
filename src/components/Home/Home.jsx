@@ -5,7 +5,6 @@ import CategoryList from '../CategoryList/CategoryList'
 const Home = () => {
 
   const [search, setSearch] = useState('');
-  const [allData, setAllData] = useState([]);
   const [isSearching, setIsSearching] = useState(null);
 
 
