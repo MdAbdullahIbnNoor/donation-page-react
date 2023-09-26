@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
 
-const CategoryList = ({search}) => {
+const CategoryList = ({isSearching, setIsSearching}) => {
 
     // console.log(isSearching);
     const [cards, setCards] = useState([]);
@@ -27,7 +27,7 @@ const CategoryList = ({search}) => {
             <div className="grid gap-7 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
                 {
                     cards.filter((card => {
-                        return search === "" ? card : card.category.includes(search)
+                        return isSearching === null ? card : card.category.includes(isSearching)
                     })).map((card, idx) => <Card key={idx} card={card}></Card>)
                 }
             </div>
