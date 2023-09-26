@@ -24,7 +24,7 @@ const Donation = () => {
         }
     }, [cards])
 
-    console.log(donations);
+    // console.log(donations);
 
 
 
@@ -65,6 +65,7 @@ const Donation = () => {
                     )
                 }
             </div>
+            {/* <div className={dataLength === donations.length ? 'hidden' : dataLength < 4 ? 'hidden' : ''}></div> */}
             <div className={dataLength === donations.length && 'hidden'}>
                 <button onClick={() => setDataLength(donations.length)} className="btn text-white bg-emerald-600 hover:bg-emerald-800 w-32 flex justify-center mx-auto my-8">Show All</button>
             </div>

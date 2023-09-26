@@ -2,9 +2,9 @@ import { Link, NavLink } from "react-router-dom"
 
 const Header = () => {
     const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/donation">Donation</NavLink></li>
-        <li><NavLink to="/statistics">Statistics</NavLink></li>
+        <li className="md:px-5 md:text-lg"><NavLink to="/">Home</NavLink></li>
+        <li className="md:px-5 md:text-lg"><NavLink to="/donation">Donation</NavLink></li>
+        <li className="md:px-5 md:text-lg"><NavLink to="/statistics">Statistics</NavLink></li>
     </>
 
     return (
