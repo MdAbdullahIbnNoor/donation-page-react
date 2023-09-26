@@ -31,7 +31,7 @@ const Statistics = () => {
     const chartData = [
         ["Data", "Percentage"],
         ["Total Categories", percentageData1],
-        ["Donated Categories", percentageData2],
+        ["Your Donation", percentageData2],
     ];
 
     const options = {

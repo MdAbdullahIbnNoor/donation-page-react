@@ -18,8 +18,8 @@ const Card = ({ card }) => {
 
     return (
         <Link to={`/card/${id}`}>
-            <div className="card shadow-xl h-72">
-                <figure className="h-28"><img className="w-full object-cover" src={picture} /></figure>
+            <div className="card shadow-xl h-80">
+                <figure className="h-40"><img className="w-full object-cover" src={picture} /></figure>
                 <div className="card-body rounded-b-xl" style={cardStyle}>
                     <div className="card-actions justify-start">
                         <div className="h-8 text-xm rounded-lg py-1 px-2 font-bold" style={categoryStyle}>{category}</div>

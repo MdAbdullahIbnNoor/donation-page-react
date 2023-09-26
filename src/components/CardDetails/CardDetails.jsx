@@ -14,7 +14,7 @@ const CardDetails = () => {
     const card = cards.find(card => card.id === idInt)
 
     console.log(card);
-    const { title, picture, description, extended_description, price, category_bg } = card;
+    const { title, picture, description, extended_description, price, text_button_bg } = card;
 
     const notify = () => {
         saveDonation(idInt);
@@ -23,7 +23,7 @@ const CardDetails = () => {
     }
 
     const categoryStyle = {
-        backgroundColor: category_bg,
+        backgroundColor: text_button_bg,
     };
 
 
