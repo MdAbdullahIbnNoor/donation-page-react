@@ -68,7 +68,7 @@ const Donation = () => {
                                         color: card.text_button_bg,
                                     }}> {card.price}$</p>
 
-                                    <Link to={`/cards/${card.id}`}>
+                                    <Link to={`/card/${card.id}`}>
                                     <button className='md:h-10 md:w-36 h-8 w-24 text-white font-semibold text-xs md:text-lg rounded-xl px-2' style={{
                                         backgroundColor: card.text_button_bg
                                     }}>
