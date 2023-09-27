@@ -1,8 +1,8 @@
-# React + Vite
+# The project is about the Donation in many helpful services done by the volunteer in order to help the poor that in need to those service.
+# This Project is done with the help of HTML, Tailwind Css and React JS. The dynamic Datas are created by ChatGPT and saved in the localfolder.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## The Features in the Project:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Every data in the donation cards are loaded from JSON dataset(dynamically).
+2. The donated cards are stored in the localStorage and displayed in the Donation page.
+3. The Donation vs Total Category of Donations ar displayed in the form of Pie Chart in Statistics page. 
